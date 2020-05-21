@@ -1,0 +1,15 @@
+#toRegisterAccount{
+    text-align: center;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+#toRegisterAccount:hover{
+    color: #9acfea;
+    text-decoration: none;
+}
+
+#toRegisterAccount:visited{
+    color: dimgray;
+    text-decoration: none;
+}

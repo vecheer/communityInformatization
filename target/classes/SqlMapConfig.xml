@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--其实mybatis的这个配置文件是可以省略掉的，因为mybatis中一切的配置，都因为整合而放在了spring中 -->
+<!--个人留了这个配置文件，主要是为了单纯的测试mybatis-->
+<configuration>
+    <properties resource="jdbcConfig.properties"></properties>
+    <!--配置数据库环境 -->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    
+
+    <!--引入配置文件 -->
+    <mappers>
+        <package name="com.vecheer.dao"/>
+    </mappers>
+    
+</configuration>
